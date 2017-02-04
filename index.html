@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageGallery</title>
+    <link rel="stylesheet" href="styles/layout.css">
+    <script src="scripts/showPic.js"></script>
+</head>
+<body>
+  <h1>Snapshots</h1>
+　<ul>
+      <li>
+          <a href="images/1.jpg" title="night" onmouseover="showPic(this);return false;">night</a>
+      </li>
+      <li>
+          <a href="images/2.jpg" title="star sky" onmouseover="showPic(this);return false;">star sky</a>
+      </li>
+      <li>
+          <a href="images/3.jpg" title="coffee" onmouseover="showPic(this);return false;">coffee</a>
+      </li>
+      <li>
+          <a href="images/4.jpg" title="street" onmouseover="showPic(this);return false;">street</a>
+      </li>
+  </ul>
+
+  <img id="placeholder" src="images/placeholder.png"  width="300px" height="200px" alt="my image gallery">
+  <p id="description">Choose an image</p>
+</body>
+</html>
