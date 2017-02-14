@@ -2,6 +2,25 @@
  * Created by caipf on 2017/2/4.
  */
 
+function preparePlaceholder() {
+    var placeholder=document.createElement('img');
+    placeholder.setAttribute('id','placeholder');
+    placeholder.setAttribute('src','images/placeholder.png');
+    placeholder.setAttribute('alt','my image gallery');
+    var description=document.createElement('p');
+    description.setAttribute('id','description');
+    var desctext=document.createTextNode('Choose an image');
+    description.appendChild(desctext);
+
+    // document.body.appendChild(placeholder);
+    // document.body.appendChild(description);
+
+    var gallery=document.getElementById("imagegallery");
+    insertAfter(placeholder,gallery);
+    insertAfter(description,placeholder);
+
+
+}
 function showPic(whichpic) {
 
     if(!document.getElementById("placeholder")){
@@ -19,9 +38,6 @@ function showPic(whichpic) {
     return true;
 }
 
-function countBodyChildren() {
-    var body_element=document.getElementsByTagName('body')[0];
-}
 
 function prepareGallery() {
     if(!document.getElementsByName){
@@ -54,6 +70,15 @@ function addLoadEvent(func) {
         }
     }
 }
+function insertAfter(newElement,targetElement) {
+    var parent=targetElement.parentNode;
+    if(parent.lastChild==targetElement){
+        parent.appendChild(newElement);
+    }else{
+        parent.insertBefore(newElement,targetElement.nextSibling);
+    }
+}
+addLoadEvent(preparePlaceholder);
 addLoadEvent(prepareGallery);
 
 // function prepareGalleryt() {
@@ -66,6 +91,10 @@ addLoadEvent(prepareGallery);
 //             }
 //         }
 //     }
+// }
+
+// function countBodyChildren() {
+//     var body_element=document.getElementsByTagName('body')[0];
 // }
 
 //window.onload=countBodyChildren;
