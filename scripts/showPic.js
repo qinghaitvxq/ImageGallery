@@ -37,8 +37,6 @@ function showPic(whichpic) {
     }
     return true;
 }
-
-
 function prepareGallery() {
     if(!document.getElementsByName){
         return false;

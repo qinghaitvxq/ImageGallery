@@ -26,3 +26,7 @@ img{
     display: block;
     clear:both;
 }
+#placeholder{
+    width:400px;
+    height:300px;
+}
